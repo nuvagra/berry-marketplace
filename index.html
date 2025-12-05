@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berry Marketplace - Coming Soon | B2B Berry Trading Platform</title>
+    <meta name="description" content="Berry Marketplace - The premier B2B platform for berry trading. Connect with verified suppliers and buyers worldwide. Launching soon.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='50' height='50' rx='12' fill='%232C5530'/%3E%3Ctext x='8' y='38' font-family='system-ui' font-size='36' font-weight='800' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2C5530;
+            --primary-green-dark: #1F3D24;
+            --accent-green: #86EFAC;
+            --accent-green-light: #DCFCE7;
+            --dark-text: #1F2937;
+            --secondary-text: #6B7280;
+            --border: #E5E7EB;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%);
+            display: flex;
+            flex-direction: column;
+            color: var(--dark-text);
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Main container */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 24px;
+            text-align: center;
+        }
+        
+        /* Logo */
+        .logo {
+            margin-bottom: 48px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .logo svg {
+            filter: drop-shadow(0 4px 20px rgba(44, 85, 48, 0.15));
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Content */
+        .content {
+            max-width: 640px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Main headline */
+        .main-title {
+            font-size: clamp(36px, 8vw, 56px);
+            font-weight: 800;
+            color: var(--dark-text);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .main-title .accent {
+            color: var(--primary-green);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .main-title .accent::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--accent-green);
+            opacity: 0.5;
+            z-index: -1;
+            border-radius: 3px;
+        }
+        
+        /* Divider */
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            margin: 0 auto 28px;
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--secondary-text);
+            line-height: 1.75;
+            margin-bottom: 50px;
+        }
+        
+        .subtitle strong {
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+        
+        /* Features */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(44, 85, 48, 0.1);
+            border: 2px solid var(--accent-green);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover .feature-icon {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(44, 85, 48, 0.15);
+        }
+        
+        .feature-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        /* Blueberry SVG icon */
+        .blueberry-icon {
+            width: 32px;
+            height: 32px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-text {
+            font-size: 13px;
+            color: var(--secondary-text);
+        }
+        
+        .footer-text a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            .main-title {
+                font-size: 36px;
+            }
+            
+            .main-title .accent::after {
+                height: 8px;
+                bottom: 2px;
+            }
+            
+            .subtitle {
+                font-size: 17px;
+            }
+            
+            .features {
+                gap: 24px;
+            }
+            
+            .feature-icon {
+                width: 56px;
+                height: 56px;
+            }
+            
+            .blueberry-icon {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <svg width="300" height="75" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="logoBlueGrad" cx="0.3" cy="0.3" r="0.7">
+                        <stop offset="0%" stop-color="#818CF8"/>
+                        <stop offset="100%" stop-color="#4338CA"/>
+                    </radialGradient>
+                </defs>
+                <!-- Blueberry-styled icon -->
+                <rect x="10" y="15" width="50" height="50" rx="12" fill="url(#logoBlueGrad)"/>
+                <text x="17" y="52" font-family="Inter, -apple-system, sans-serif" font-size="36" font-weight="800" fill="#FFFFFF">B</text>
+                <!-- Small crown/calyx detail -->
+                <circle cx="52" cy="20" r="4" fill="#2C5530"/>
+                <path d="M48 18 Q52 14, 56 18" stroke="#2C5530" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <text x="75" y="40" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#1F2937">Berry</text>
+                <text x="75" y="60" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#6B7280" letter-spacing="3">MARKETPLACE</text>
+            </svg>
+        </div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="main-title">Coming <span class="accent">Soon</span></h1>
+            
+            <div class="divider"></div>
+            
+            <p class="subtitle">
+                <strong>Simplify and automate</strong> your berry buying and selling. 
+                Our smart platform connects you with verified partners worldwide — 
+                helping you find the <strong>perfect match at the best price</strong>, effortlessly.
+            </p>
+        </div>
+        
+        <!-- Features -->
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <!-- Blueberry icon -->
+                    <svg class="blueberry-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main berry -->
+                        <circle cx="32" cy="36" r="22" fill="#4F46E5"/>
+                        <circle cx="32" cy="36" r="22" fill="url(#blueGrad)"/>
+                        <!-- Highlight -->
+                        <ellipse cx="26" cy="30" rx="6" ry="4" fill="rgba(255,255,255,0.3)"/>
+                        <!-- Crown/calyx -->
+                        <path d="M26 16 L28 20 L32 18 L36 20 L38 16" stroke="#2C5530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="32" cy="18" r="3" fill="#2C5530"/>
+                        <defs>
+                            <radialGradient id="blueGrad" cx="0.3" cy="0.3" r="0.7">
+                                <stop offset="0%" stop-color="#818CF8"/>
+                                <stop offset="100%" stop-color="#3730A3"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="feature-text">Berry Trading</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C5530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <span class="feature-text">B2B Platform</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C5530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <span class="feature-text">Global Network</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C5530" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                </div>
+                <span class="feature-text">Smart Matching</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2025 Berry Marketplace. A <a href="#">Nuvagra</a> Company.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
