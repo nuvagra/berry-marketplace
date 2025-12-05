@@ -58,8 +58,10 @@
             animation: fadeInDown 0.8s ease-out;
         }
         
-        .logo svg {
+        .logo img {
             filter: drop-shadow(0 4px 20px rgba(44, 85, 48, 0.15));
+            max-width: 100%;
+            height: auto;
         }
         
         @keyframes fadeInDown {
@@ -248,22 +250,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="logo">
-            <svg width="300" height="75" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <radialGradient id="logoBlueGrad" cx="0.3" cy="0.3" r="0.7">
-                        <stop offset="0%" stop-color="#818CF8"/>
-                        <stop offset="100%" stop-color="#4338CA"/>
-                    </radialGradient>
-                </defs>
-                <!-- Blueberry-styled icon -->
-                <rect x="10" y="15" width="50" height="50" rx="12" fill="url(#logoBlueGrad)"/>
-                <text x="17" y="52" font-family="Inter, -apple-system, sans-serif" font-size="36" font-weight="800" fill="#FFFFFF">B</text>
-                <!-- Small crown/calyx detail -->
-                <circle cx="52" cy="20" r="4" fill="#2C5530"/>
-                <path d="M48 18 Q52 14, 56 18" stroke="#2C5530" stroke-width="2" stroke-linecap="round" fill="none"/>
-                <text x="75" y="40" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#1F2937">Berry</text>
-                <text x="75" y="60" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#6B7280" letter-spacing="3">MARKETPLACE</text>
-            </svg>
+            <img src="berry-marketplace-icon-light.jpg" alt="Berry Marketplace Logo" width="75" height="75">
         </div>
         
         <!-- Main content -->
@@ -273,8 +260,8 @@
             <div class="divider"></div>
             
             <p class="subtitle">
-                <strong>Simplify and automate</strong> your berry buying and selling. 
-                Our smart platform connects you with verified partners worldwide — 
+                <strong style="color: var(--primary-green);">The future of B2B berry trading.</strong> Connect with <strong>verified producers, suppliers, and buyers</strong> worldwide. 
+                One smart platform to simplify and automate your business — 
                 helping you find the <strong>perfect match at the best price</strong>, effortlessly.
             </p>
         </div>
